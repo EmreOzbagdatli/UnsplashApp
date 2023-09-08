@@ -9,7 +9,11 @@ import SwiftUI
 
 struct FeedView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            
+        Image(systemName: "heart")
+            .resizable()
+            .frame(width: 200,height: 200,alignment: .center)
+        
     }
 }
 
