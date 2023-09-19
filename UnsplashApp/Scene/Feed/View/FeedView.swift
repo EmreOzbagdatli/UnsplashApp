@@ -13,6 +13,16 @@ struct FeedView: View {
         Image(systemName: "heart")
             .resizable()
             .frame(width: 200,height: 200,alignment: .center)
+            .onAppear {
+                FeedViewImageManager.shared.fetchFeedImages { result in
+                    switch result {
+                    case .success(let images):
+                        print(images)
+                    case .failure(let error):
+                        print(error)
+                    }
+                }
+            }
         
     }
 }
