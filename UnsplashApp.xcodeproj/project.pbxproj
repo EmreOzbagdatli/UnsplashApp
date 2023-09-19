@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1EB30B312AB9BF7F009BA025 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 1EB30B302AB9BF7F009BA025 /* Nuke */; };
+		1EB30B332AB9BF7F009BA025 /* NukeExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = 1EB30B322AB9BF7F009BA025 /* NukeExtensions */; };
+		1EB30B352AB9BF7F009BA025 /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = 1EB30B342AB9BF7F009BA025 /* NukeUI */; };
+		1EB30B382AB9BFBD009BA025 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1EB30B372AB9BFBD009BA025 /* Alamofire */; };
 		1ED879472AAB7F7900ED6D67 /* UnsplashAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED879462AAB7F7900ED6D67 /* UnsplashAppApp.swift */; };
 		1ED879492AAB7F7900ED6D67 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED879482AAB7F7900ED6D67 /* MainView.swift */; };
 		1ED8794B2AAB7F7A00ED6D67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ED8794A2AAB7F7A00ED6D67 /* Assets.xcassets */; };
@@ -38,6 +42,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EB30B352AB9BF7F009BA025 /* NukeUI in Frameworks */,
+				1EB30B382AB9BFBD009BA025 /* Alamofire in Frameworks */,
+				1EB30B312AB9BF7F009BA025 /* Nuke in Frameworks */,
+				1EB30B332AB9BF7F009BA025 /* NukeExtensions in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +230,12 @@
 			dependencies = (
 			);
 			name = UnsplashApp;
+			packageProductDependencies = (
+				1EB30B302AB9BF7F009BA025 /* Nuke */,
+				1EB30B322AB9BF7F009BA025 /* NukeExtensions */,
+				1EB30B342AB9BF7F009BA025 /* NukeUI */,
+				1EB30B372AB9BFBD009BA025 /* Alamofire */,
+			);
 			productName = UnsplashApp;
 			productReference = 1ED879432AAB7F7900ED6D67 /* UnsplashApp.app */;
 			productType = "com.apple.product-type.application";
@@ -250,6 +264,10 @@
 				Base,
 			);
 			mainGroup = 1ED8793A2AAB7F7900ED6D67;
+			packageReferences = (
+				1EB30B2F2AB9BF7F009BA025 /* XCRemoteSwiftPackageReference "Nuke" */,
+				1EB30B362AB9BFBD009BA025 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 1ED879442AAB7F7900ED6D67 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -484,6 +502,48 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1EB30B2F2AB9BF7F009BA025 /* XCRemoteSwiftPackageReference "Nuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Nuke";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.0.0;
+			};
+		};
+		1EB30B362AB9BFBD009BA025 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1EB30B302AB9BF7F009BA025 /* Nuke */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1EB30B2F2AB9BF7F009BA025 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = Nuke;
+		};
+		1EB30B322AB9BF7F009BA025 /* NukeExtensions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1EB30B2F2AB9BF7F009BA025 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = NukeExtensions;
+		};
+		1EB30B342AB9BF7F009BA025 /* NukeUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1EB30B2F2AB9BF7F009BA025 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = NukeUI;
+		};
+		1EB30B372AB9BFBD009BA025 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1EB30B362AB9BFBD009BA025 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1ED8793B2AAB7F7900ED6D67 /* Project object */;
 }
