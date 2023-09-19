@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct FeedImage: Decodable {
+struct FeedImage: Decodable, Identifiable {
     let id: String
     let created_at: String
     let updated_at: String

@@ -6,24 +6,37 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct FeedView: View {
+
+    @StateObject private var viewModel = FeedViewModel()
+
     var body: some View {
-            
-        Image(systemName: "heart")
-            .resizable()
-            .frame(width: 200,height: 200,alignment: .center)
-            .onAppear {
-                FeedViewImageManager.shared.fetchFeedImages { result in
-                    switch result {
-                    case .success(let images):
-                        print(images)
-                    case .failure(let error):
-                        print(error)
-                    }
-                }
+        ScrollView {
+            if !(viewModel.error.isEmpty) || !(viewModel.error == "") {
+                Text(viewModel.error)
+                    .foregroundColor(.white)
+                    .padding()
+                    .background(Color.black)
+                    .cornerRadius(15)
+            } else {
+                List(filteredCharacters) { character in
+                                LazyVGrid(columns: columns) {
+                                    NavigationLink(destination: CharacterDetailView(character: character)) {
+                                        CharacterListCellView(character: character)
+                                            .onAppear {
+                                            if character.id == filteredCharacters.count - 1 {
+                                                viewModel.fetchNextCharacters()
+                                            }
+                                        }
+                                    }
+                                }
             }
-        
+        }.onAppear {
+            viewModel.getAllFeedImages()
+        }
+
     }
 }
 
