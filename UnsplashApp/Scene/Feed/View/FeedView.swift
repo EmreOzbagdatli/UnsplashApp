@@ -10,34 +10,27 @@ import Kingfisher
 
 struct FeedView: View {
 
+    let columns = [
+        GridItem(.adaptive(minimum: 150))
+    ]
+
     @StateObject private var viewModel = FeedViewModel()
 
     var body: some View {
-        ScrollView {
-            if !(viewModel.error.isEmpty) || !(viewModel.error == "") {
-                Text(viewModel.error)
-                    .foregroundColor(.white)
-                    .padding()
-                    .background(Color.black)
-                    .cornerRadius(15)
-            } else {
-                List(filteredCharacters) { character in
-                                LazyVGrid(columns: columns) {
-                                    NavigationLink(destination: CharacterDetailView(character: character)) {
-                                        CharacterListCellView(character: character)
-                                            .onAppear {
-                                            if character.id == filteredCharacters.count - 1 {
-                                                viewModel.fetchNextCharacters()
-                                            }
-                                        }
-                                    }
-                                }
+        List(viewModel.feedImages) { feedItem in
+            LazyVGrid(columns: columns) {
+                KFImage(URL(string: "\(feedItem.urls.small)"))
+                    .onAppear {
+                    if feedItem.id == viewModel.feedImages.last?.id {
+                        viewModel.getAllFeedImages()
+                    }
+                }
             }
         }.onAppear {
             viewModel.getAllFeedImages()
         }
-
     }
+
 }
 
 struct FeedView_Previews: PreviewProvider {
