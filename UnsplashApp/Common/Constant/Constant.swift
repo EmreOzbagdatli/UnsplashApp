@@ -11,5 +11,6 @@ struct Constant {
     static let baseurl = "https://api.unsplash.com"
     static let photoUrl = "photos"
     static let clientID = "MO9Sp8hm8rtd30boCNZg4lymQ-Cd0n20Ildz8vlQeZM"
+    static let clientSecret = "IlIXa6xNdziXxvFqq8qz6XIkus0FkClX3i5HmCMZwZA"
     static let search = "search/photos"
 }

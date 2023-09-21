@@ -6,10 +6,25 @@
 //
 
 import SwiftUI
+import WebKit
 
 struct ProfileView: View {
+    
+    @StateObject private var viewModel = ProfileViewModel()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            if !(viewModel.html.isEmpty) {
+                Webview(web: WKWebView(), req: LoginManager.shared.loggedInReq!)
+                     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+            } else {
+                Button {
+                    viewModel.loginUser()
+                } label: {
+                    Text("Log in")
+                }
+            }
+        }
     }
 }
 

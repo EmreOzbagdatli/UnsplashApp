@@ -30,9 +30,6 @@ final class FeedViewImageManager {
         request.httpMethod = "GET"
         let session = URLSession.shared
         
-        print(url)
-        
-        
         session.dataTask(with: request) { data, _, error in
             if let error = error {
                 completionHandler(.failure(NetworkError.someError(error: error)))

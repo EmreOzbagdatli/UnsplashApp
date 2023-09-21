@@ -7,11 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E3DE2692ABBC9EB0085DD15 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3DE2682ABBC9EB0085DD15 /* SearchBar.swift */; };
 		1EB30B382AB9BFBD009BA025 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1EB30B372AB9BFBD009BA025 /* Alamofire */; };
 		1EB30B3E2AB9C140009BA025 /* FeedViewImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB30B3D2AB9C140009BA025 /* FeedViewImageManager.swift */; };
 		1EB30B412AB9C2E4009BA025 /* FeedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB30B402AB9C2E4009BA025 /* FeedImage.swift */; };
 		1EB30B442AB9C7E3009BA025 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB30B432AB9C7E3009BA025 /* FeedViewModel.swift */; };
 		1EB30B472AB9C97B009BA025 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 1EB30B462AB9C97B009BA025 /* Kingfisher */; };
+		1EB30B4A2AB9D764009BA025 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB30B492AB9D764009BA025 /* ProfileViewModel.swift */; };
+		1EB30B4C2AB9D841009BA025 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB30B4B2AB9D841009BA025 /* LoginManager.swift */; };
+		1EB30B502AB9DC39009BA025 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB30B4F2AB9DC39009BA025 /* SafariView.swift */; };
 		1ED879472AAB7F7900ED6D67 /* UnsplashAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED879462AAB7F7900ED6D67 /* UnsplashAppApp.swift */; };
 		1ED879492AAB7F7900ED6D67 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED879482AAB7F7900ED6D67 /* MainView.swift */; };
 		1ED8794B2AAB7F7A00ED6D67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ED8794A2AAB7F7A00ED6D67 /* Assets.xcassets */; };
@@ -25,9 +29,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E3DE2682ABBC9EB0085DD15 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		1EB30B3D2AB9C140009BA025 /* FeedViewImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewImageManager.swift; sourceTree = "<group>"; };
 		1EB30B402AB9C2E4009BA025 /* FeedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImage.swift; sourceTree = "<group>"; };
 		1EB30B432AB9C7E3009BA025 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
+		1EB30B492AB9D764009BA025 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		1EB30B4B2AB9D841009BA025 /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
+		1EB30B4F2AB9DC39009BA025 /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 		1ED879432AAB7F7900ED6D67 /* UnsplashApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnsplashApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ED879462AAB7F7900ED6D67 /* UnsplashAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashAppApp.swift; sourceTree = "<group>"; };
 		1ED879482AAB7F7900ED6D67 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -54,10 +62,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E3DE2652ABBC9B80085DD15 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				1E3DE2682ABBC9EB0085DD15 /* SearchBar.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 		1EB30B3C2AB9C130009BA025 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
 				1EB30B3D2AB9C140009BA025 /* FeedViewImageManager.swift */,
+				1EB30B4B2AB9D841009BA025 /* LoginManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -76,6 +93,30 @@
 				1EB30B432AB9C7E3009BA025 /* FeedViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1EB30B482AB9D75A009BA025 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1EB30B492AB9D764009BA025 /* ProfileViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1EB30B4D2AB9DC28009BA025 /* Safari */ = {
+			isa = PBXGroup;
+			children = (
+				1EB30B4E2AB9DC2D009BA025 /* View */,
+			);
+			path = Safari;
+			sourceTree = "<group>";
+		};
+		1EB30B4E2AB9DC2D009BA025 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1EB30B4F2AB9DC39009BA025 /* SafariView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		1ED8793A2AAB7F7900ED6D67 = {
@@ -126,6 +167,8 @@
 		1ED879552AAB82E200ED6D67 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				1E3DE2652ABBC9B80085DD15 /* Search */,
+				1EB30B4D2AB9DC28009BA025 /* Safari */,
 				1ED8796C2AAB87F700ED6D67 /* Tab */,
 				1ED879632AAB83C700ED6D67 /* Feed */,
 				1ED8795F2AAB83A800ED6D67 /* Profile */,
@@ -171,6 +214,7 @@
 		1ED8795F2AAB83A800ED6D67 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				1EB30B482AB9D75A009BA025 /* ViewModel */,
 				1ED879602AAB83B200ED6D67 /* View */,
 			);
 			path = Profile;
@@ -323,10 +367,14 @@
 			files = (
 				1EB30B412AB9C2E4009BA025 /* FeedImage.swift in Sources */,
 				1ED8796B2AAB848F00ED6D67 /* Constant.swift in Sources */,
+				1E3DE2692ABBC9EB0085DD15 /* SearchBar.swift in Sources */,
 				1ED8795A2AAB833000ED6D67 /* LoginView.swift in Sources */,
 				1ED8796F2AAB880600ED6D67 /* TabView.swift in Sources */,
 				1ED879492AAB7F7900ED6D67 /* MainView.swift in Sources */,
+				1EB30B4C2AB9D841009BA025 /* LoginManager.swift in Sources */,
+				1EB30B502AB9DC39009BA025 /* SafariView.swift in Sources */,
 				1EB30B442AB9C7E3009BA025 /* FeedViewModel.swift in Sources */,
+				1EB30B4A2AB9D764009BA025 /* ProfileViewModel.swift in Sources */,
 				1ED879622AAB83BD00ED6D67 /* ProfileView.swift in Sources */,
 				1ED8795E2AAB83A000ED6D67 /* FavouriteView.swift in Sources */,
 				1ED879662AAB83DF00ED6D67 /* FeedView.swift in Sources */,
