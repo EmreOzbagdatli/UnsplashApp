@@ -21,7 +21,7 @@ struct LoginView: View {
                     .padding()
        
                 if isLoggedIn == true {
-                    Text("imdat")
+                    Text("xd")
                 }
             }
         }

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1E3DE2692ABBC9EB0085DD15 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3DE2682ABBC9EB0085DD15 /* SearchBar.swift */; };
+		1E2A97CC2ABC4CFD00768339 /* OAuthSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1E2A97CB2ABC4CFD00768339 /* OAuthSwift */; };
 		1EB30B382AB9BFBD009BA025 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1EB30B372AB9BFBD009BA025 /* Alamofire */; };
 		1EB30B3E2AB9C140009BA025 /* FeedViewImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB30B3D2AB9C140009BA025 /* FeedViewImageManager.swift */; };
 		1EB30B412AB9C2E4009BA025 /* FeedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB30B402AB9C2E4009BA025 /* FeedImage.swift */; };
@@ -29,7 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1E3DE2682ABBC9EB0085DD15 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		1E2A97CD2ABC4D1000768339 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		1EB30B3D2AB9C140009BA025 /* FeedViewImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewImageManager.swift; sourceTree = "<group>"; };
 		1EB30B402AB9C2E4009BA025 /* FeedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImage.swift; sourceTree = "<group>"; };
 		1EB30B432AB9C7E3009BA025 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
@@ -56,20 +56,13 @@
 			files = (
 				1EB30B472AB9C97B009BA025 /* Kingfisher in Frameworks */,
 				1EB30B382AB9BFBD009BA025 /* Alamofire in Frameworks */,
+				1E2A97CC2ABC4CFD00768339 /* OAuthSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1E3DE2652ABBC9B80085DD15 /* Search */ = {
-			isa = PBXGroup;
-			children = (
-				1E3DE2682ABBC9EB0085DD15 /* SearchBar.swift */,
-			);
-			path = Search;
-			sourceTree = "<group>";
-		};
 		1EB30B3C2AB9C130009BA025 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +131,7 @@
 		1ED879452AAB7F7900ED6D67 /* UnsplashApp */ = {
 			isa = PBXGroup;
 			children = (
+				1E2A97CD2ABC4D1000768339 /* Info.plist */,
 				1ED879682AAB83FB00ED6D67 /* Common */,
 				1ED879672AAB83F400ED6D67 /* Resources */,
 				1ED879552AAB82E200ED6D67 /* Scene */,
@@ -167,7 +161,6 @@
 		1ED879552AAB82E200ED6D67 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				1E3DE2652ABBC9B80085DD15 /* Search */,
 				1EB30B4D2AB9DC28009BA025 /* Safari */,
 				1ED8796C2AAB87F700ED6D67 /* Tab */,
 				1ED879632AAB83C700ED6D67 /* Feed */,
@@ -306,6 +299,7 @@
 			packageProductDependencies = (
 				1EB30B372AB9BFBD009BA025 /* Alamofire */,
 				1EB30B462AB9C97B009BA025 /* Kingfisher */,
+				1E2A97CB2ABC4CFD00768339 /* OAuthSwift */,
 			);
 			productName = UnsplashApp;
 			productReference = 1ED879432AAB7F7900ED6D67 /* UnsplashApp.app */;
@@ -338,6 +332,7 @@
 			packageReferences = (
 				1EB30B362AB9BFBD009BA025 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				1EB30B452AB9C97B009BA025 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				1E2A97CA2ABC4CFD00768339 /* XCRemoteSwiftPackageReference "OAuthSwift" */,
 			);
 			productRefGroup = 1ED879442AAB7F7900ED6D67 /* Products */;
 			projectDirPath = "";
@@ -367,7 +362,6 @@
 			files = (
 				1EB30B412AB9C2E4009BA025 /* FeedImage.swift in Sources */,
 				1ED8796B2AAB848F00ED6D67 /* Constant.swift in Sources */,
-				1E3DE2692ABBC9EB0085DD15 /* SearchBar.swift in Sources */,
 				1ED8795A2AAB833000ED6D67 /* LoginView.swift in Sources */,
 				1ED8796F2AAB880600ED6D67 /* TabView.swift in Sources */,
 				1ED879492AAB7F7900ED6D67 /* MainView.swift in Sources */,
@@ -511,6 +505,7 @@
 				DEVELOPMENT_TEAM = KSGZPL6D9M;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = UnsplashApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -540,6 +535,7 @@
 				DEVELOPMENT_TEAM = KSGZPL6D9M;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = UnsplashApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -582,6 +578,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		1E2A97CA2ABC4CFD00768339 /* XCRemoteSwiftPackageReference "OAuthSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/OAuthSwift/OAuthSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 		1EB30B362AB9BFBD009BA025 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
@@ -601,6 +605,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		1E2A97CB2ABC4CFD00768339 /* OAuthSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1E2A97CA2ABC4CFD00768339 /* XCRemoteSwiftPackageReference "OAuthSwift" */;
+			productName = OAuthSwift;
+		};
 		1EB30B372AB9BFBD009BA025 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 1EB30B362AB9BFBD009BA025 /* XCRemoteSwiftPackageReference "Alamofire" */;
